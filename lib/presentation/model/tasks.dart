@@ -1,3 +1,6 @@
+import 'package:json_annotation/json_annotation.dart';
+
+@JsonSerializable()
 class Tasks {
   String? id;
   String? createdAt;
@@ -20,5 +23,10 @@ class Tasks {
     data['name'] = name;
     data['avatar'] = avatar;
     return data;
+  }
+
+  @override
+  String toString() {
+    return 'Tasks{id: $id, createdAt: $createdAt, name: $name, avatar: $avatar}';
   }
 }
